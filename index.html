@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aminudin Nima — Digital Product Manager</title>
+<meta name="description" content="Portfolio Aminudin Nima, Digital Product Manager di PT. Sofco Graha.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+  <header class="header">
+    <a href="#top" class="logo">AMN</a>
+    <nav id="nav" class="nav">
+      <a href="#work">Work</a><a href="#builds">Builds</a><a href="#about">About</a>
+      <a href="#startup">Startup</a><a href="#library">Library</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menu" aria-label="Open menu">☰</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <span class="pill">Digital Product Manager</span>
+      <h1>Aminudin <em>Nima</em></h1>
+      <p class="tagline">I take products from <em>0→1</em> and scale them <em>1→n</em></p>
+      <p class="mono muted">Digital Product Manager at Sofco Graha</p>
+      <p class="quote">"Get it done and become 1% better every day.."</p>
+      <div class="actions">
+        <a class="btn primary" href="#work">💼 Work Experience</a>
+        <a class="btn" href="#builds">📁 View My Projects</a>
+        <a class="btn" href="assets/resume.pdf" download>📁 Download Resume</a>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <div class="heading"><h2>Work Experience</h2><p>A few highlights from product, SaaS, and HRIS work.</p></div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section id="builds" class="section">
+      <div class="heading"><h2>Builds &amp; Breakdowns</h2><p>Side projects, case studies, and product experiments.</p></div>
+      <div class="grid builds" id="builds-grid"></div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="about-copy">
+        <h2 class="grad">About Me</h2>
+        <p class="muted lead">“The self is not something one finds, it is something one creates.” — Thomas Szasz</p>
+        <div class="chips"><span class="pill">~4 yrs · Product</span><span class="pill">Indonesia</span></div>
+        <p>A Product Manager with approximately 4 years of experience across HRIS, ad-tech for financial services, and bespoke (tailor-made) solutions, guided by a single belief: <b>“In God we trust; all others must bring data.”</b></p>
+        <p>Outside of work hours, I write and travel. A founder’s mindset blends with what is happening now and what lies ahead.</p>
+        <div class="note">✦ A lifelong fan of beef soup—someone biologically wired to remain optimistic and loyal, even under pressure.</div>
+      </div>
+      <div class="about-visual">
+        <span class="status">Available for interesting conversations <i class="dot"></i></span>
+      </div>
+    </section>
+
+    <section id="startup" class="section startup">
+      <div class="startup-img"><span class="tag">Nogozo · 2020–2023</span></div>
+      <div class="startup-card">
+        <p class="mono green">Before the Product job, there was a startup.</p>
+        <h3>Building for students, from a college room.</h3>
+        <p class="muted">A COVID-born idea that grew to 10K+ users, won a ₹5L government grant, and made it to Shark Tank India Season 1.</p>
+        <div class="stats"><div><b>10K+</b><span>Users</span></div><div><b>₹5L</b><span>Govt Grant</span></div><div><b>S1</b><span>Shark Tank</span></div></div>
+        <a class="btn green-btn" href="#">Read My Startup Story ↗</a>
+      </div>
+    </section>
+
+    <section id="library" class="section">
+      <div class="heading"><h2>The Library</h2><p>Things I've written, read, and thought worth sharing.</p></div>
+      <div class="grid library" id="library-grid"></div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="heading"><h2>Get In Touch</h2><p>Have an opportunity, a question, or just want to say hi?</p></div>
+      <div class="links" id="contact-links"></div>
+      <footer class="footer">
+        <span class="logo small">AMN</span>
+        <span class="mono muted">Built with curiosity, data, and a little stardust.</span>
+        <a class="mono muted" href="#top">Back to top ↑</a>
+      </footer>
+    </section>
+  </main>
+</div>
+<script src="data.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
