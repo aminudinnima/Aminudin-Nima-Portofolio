@@ -12,3 +12,6 @@ Static site (HTML + CSS + vanilla JS). Tanpa build step, tanpa dependency — pa
 
 Preview lokal: `npx serve .` atau buka `index.html`.
 Deploy: push ke `main` → Vercel otomatis deploy ulang.
+
+## Foto
+Taruh foto di `assets/startup.jpg` (bagian Startup) dan `assets/about.jpg` (bagian About). Jika file belum ada, otomatis tampil latar gradien hijau.
