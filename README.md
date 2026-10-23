@@ -1,17 +1,17 @@
-# Aminudin Nima — Portfolio
+# Aminudin Nima - Portfolio
 
-Static site (HTML + CSS + vanilla JS). Tanpa build step, tanpa dependency — paling mudah dirawat dan langsung jalan di Vercel.
+Static portfolio website (HTML, CSS, JavaScript). No build step or dependencies.
 
-| File | Fungsi |
-|---|---|
-| `data.js` | **Semua konten** (pengalaman, projects, library, kontak). Edit di sini saja. |
-| `index.html` | Struktur halaman (Hero, About, Startup) |
-| `styles.css` | Tampilan & warna (variabel di `:root`) |
-| `main.js` | Merender data ke halaman |
-| `assets/` | Taruh gambar & `resume.pdf` di sini |
+## Run locally
+Open `index.html` in a browser, or run `python3 -m http.server` and visit http://localhost:8000.
 
-Preview lokal: `npx serve .` atau buka `index.html`.
-Deploy: push ke `main` → Vercel otomatis deploy ulang.
+## Deploy with GitHub Pages
+1. Push these files to a GitHub repository.
+2. Go to Settings > Pages.
+3. Under Source, choose the `main` branch and the `/ (root)` folder, then Save.
+4. The site goes live at `https://<username>.github.io/<repo>/`.
 
-## Foto
-Taruh foto di `assets/startup.jpg` (bagian Startup) dan `assets/about.jpg` (bagian About). Jika file belum ada, otomatis tampil latar gradien hijau.
+## Files
+- `index.html` - page structure
+- `style.css` - styles (light and dark mode)
+- `script.js` - renders the timeline, project cards, library cards, and menu
