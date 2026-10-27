@@ -2,95 +2,92 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Aminudin Nima – Digital Product Manager</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aminudin Nima — Digital Product Manager</title>
+<meta name="description" content="Portfolio Aminudin Nima, Digital Product Manager di PT. Sofco Graha.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="wrap" id="top">
-<nav>
-<a class="logo" href="#top">AMN</a>
-<div class="links mono"><a href="#work">Work</a><a href="#builds">Builds</a><a href="#about">About</a><a href="#startup">Startup</a><a href="#library">Library</a><a href="#contact">Contact</a></div>
-<button class="burger" id="bg" aria-label="Menu">☰</button>
-<div id="menu" class="mono"><a href="#work">Work</a><a href="#builds">Builds</a><a href="#about">About</a><a href="#startup">Startup</a><a href="#library">Library</a><a href="#contact">Contact</a></div>
-</nav>
+<div class="shell">
+  <header class="header">
+    <a href="#top" class="logo">AMN</a>
+    <nav id="nav" class="nav">
+      <a href="#work">Work</a><a href="#builds">Builds</a><a href="#about">About</a>
+      <a href="#startup">Startup</a><a href="#library">Library</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menu" aria-label="Open menu"><i data-icon="menu"></i></button>
+  </header>
 
-<header class="hero">
-<span class="pill mono">Digital Product Manager</span>
-<h1>Aminudin Nima</h1>
-<p class="tag-line">I take products from 0→1 and scale them 1→n</p>
-<p class="mono">Digital Product Manager at Sofco Graha</p>
-<p class="quote">“Get it done and become 1% better every day.”</p>
-<div class="btns">
-<a class="btn" href="#work">▣ Work Experience</a>
-<a class="btn" href="#builds">▭ View My Projects</a>
-<a class="btn" href="#contact">⬚ Download Resume</a>
+  <main id="top">
+    <section class="hero">
+      <span class="pill">Digital Product Manager</span>
+      <h1>Aminudin <em>Nima</em></h1>
+      <p class="tagline">I take products from <em>0→1</em> and scale them <em>1→n</em></p>
+      <p class="mono muted">Digital Product Manager at Sofco Graha</p>
+      <p class="quote">"Get it done and become 1% better every day.."</p>
+      <div class="actions">
+        <a class="btn primary" href="#work"><i data-icon="briefcase"></i>Work Experience</a>
+        <a class="btn" href="#builds"><i data-icon="folder"></i>View My Projects</a>
+        <a class="btn" href="assets/resume.pdf" download><i data-icon="folder"></i>Download Resume</a>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <div class="heading"><h2>Work Experience</h2><p>A few highlights from product, SaaS, and HRIS work.</p></div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section id="builds" class="section">
+      <div class="heading"><h2>Builds &amp; Breakdowns</h2><p>Side projects, case studies, and product experiments.</p></div>
+      <div class="grid builds" id="builds-grid"></div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="about-copy">
+        <h2 class="grad">About Me</h2>
+        <p class="lead">“The self is not something one finds, it is something one creates.” — Thomas Szasz</p>
+        <div class="chips"><span class="pill">~4 yrs · Product</span><span class="pill">Indonesia</span></div>
+        <p>A Product Manager with approximately 4 years of experience across HRIS, ad-tech for financial services, and bespoke (tailor-made) solutions, guided by a single belief: <b>“In God we trust; all others must bring data.”</b></p>
+        <p>Outside of work hours, I write and travel. A founder’s mindset blends with what is happening now and what lies ahead.</p>
+        <div class="note"><i data-icon="spark"></i> A lifelong fan of beef soup—someone biologically wired to remain optimistic and loyal, even under pressure.</div>
+      </div>
+      <div class="about-visual">
+        <span class="status">Available for interesting conversations <i class="dot"></i></span>
+        <div class="soc"><span><i data-icon="facebook"></i></span><span><i data-icon="chat"></i></span><span><i data-icon="mail"></i></span></div>
+      </div>
+    </section>
+
+    <section id="startup" class="section startup">
+      <div class="startup-img"><span class="tag">Nogozo · 2020–2023</span></div>
+      <div class="startup-card">
+        <p class="mono green">Before the Product job, there was a startup.</p>
+        <h3>Building for students, from a college room.</h3>
+        <p class="muted">A COVID-born idea that grew to 10K+ users, won a ₹5L government grant, and made it to Shark Tank India Season 1.</p>
+        <div class="stats"><div><b>10K+</b><span>Users</span></div><div><b>₹5L</b><span>Govt Grant</span></div><div><b>S1</b><span>Shark Tank</span></div></div>
+        <a class="btn green-btn" href="#">Read My Startup Story ↗</a>
+      </div>
+    </section>
+
+    <section id="library" class="section">
+      <div class="heading"><h2>The Library</h2><p>Things I've written, read, and thought worth sharing.</p></div>
+      <div class="grid library" id="library-grid"></div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="heading"><h2>Get In Touch</h2><p>Have an opportunity, a question, or just want to say hi?</p></div>
+      <div class="links" id="contact-links"></div>
+      <footer class="footer">
+        <span class="logo small">AMN</span>
+        <span class="mono muted">Built with curiosity, data, and a little stardust.</span>
+        <a class="mono muted" href="#top">Back to top ↑</a>
+      </footer>
+    </section>
+  </main>
 </div>
-</header>
-
-<section class="box" id="work">
-<h2>Work Experience</h2>
-<p class="sub">A few highlights from product, SaaS, and HRIS work.</p>
-<div class="tl" id="tl"></div>
-</section>
-
-<section class="box" id="builds">
-<h2>Builds &amp; Breakdowns</h2>
-<p class="sub">Side projects, case studies, and product experiments.</p>
-<div class="mq"><div class="track" id="tr"></div></div>
-</section>
-
-<section style="height:150px"></section>
-
-<section class="box" id="about" style="margin-top:0">
-<div class="about">
-<div>
-<h2>About Me</h2>
-<p class="qt">“The self is not something one finds, it is something one creates.” — Thomas Szasz</p>
-<div class="tags mono" style="margin:14px 0"><span>4 yrs · Product</span><span>Indonesia</span><span style="width:70px"></span></div>
-<p>A Product Manager with approximately 4 years of experience across HRIS, ad-tech for financial services, and bespoke (tailor-made) solutions, guided by a single belief: <b>“In God we trust; all others must bring data.”</b></p>
-<p>Outside of work hours, I write and travel. A founder’s mindset blends with what is happening now and what lies ahead.</p>
-<div class="note">✦<br>A lifelong fan of beef soup—someone biologically wired to remain optimistic and loyal, even under pressure.</div>
-</div>
-<div class="ph"><span class="av mono">Available for interesting conversations<i></i></span><div class="soc"><span>f</span><span>◉</span><span>■</span></div></div>
-</div>
-</section>
-
-<section class="su" id="startup">
-<div class="sp"><span class="mono">Nogson · 2020-2023</span></div>
-<div class="or">
-<div class="m mono">Before the Product job, there was a startup.</div>
-<h3>Building for students, from a college room.</h3>
-<p>A college-born idea that grew to 10K+ users, won a ₹5L government grant, and made it to Shark Tank India Season 1.</p>
-<div class="st"><div><b>10K+</b>Users</div><div><b>₹5L</b>Govt Grant</div><div><b>S1</b>Shark Tank</div></div>
-<a class="btn" href="#startup">Read My Startup Story</a>
-</div>
-</section>
-
-<section style="height:220px"></section>
-
-<section class="sec" id="library">
-<h2>The Library</h2>
-<p class="sub">Things I’ve written, read, and thought worth sharing.</p>
-<div class="lib" id="lib"></div>
-</section>
-
-<section class="sec" id="contact">
-<h2>Get In Touch</h2>
-<p class="sub" style="margin:0">Have an opportunity, a question, or just want to say hi?</p>
-<div class="cn">
-<a href="mailto:hello@example.com">✉ Gmail</a><a href="#">in LinkedIn</a><a href="#">◎ GitHub</a><a href="#">◉ Instagram</a><a href="#">☏ Talks of AMN</a>
-</div>
-</section>
-
-<footer>
-<a class="logo" href="#top">AMN</a>
-<span class="mono">Built with curiosity, data, and a little stardust.</span>
-<a class="mono" href="#top" style="color:inherit;text-decoration:none">Back to top ↑</a>
-</footer>
-</div>
-
-<script src="script.js"></script>
+<script src="data.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
