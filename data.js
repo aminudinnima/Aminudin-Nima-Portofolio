@@ -23,9 +23,9 @@ const DATA = {
   ],
   contacts: [
     { icon: "mail", label: "Gmail", href: "mailto:" },
-    { icon: "linkedin", label: "LinkedIn", href: "#" },
+    { icon: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/aminudin-nima-6137a7b7/" },
     { icon: "github", label: "GitHub", href: "https://github.com/aminudinnima" },
-    { icon: "instagram", label: "Instagram", href: "#" },
-    { icon: "globe", label: "Talks of Yug", href: "#" }
+    { icon: "instagram", label: "Instagram", href: "https://www.instagram.com/aminudin_nima/" },
+    { icon: "globe", label: "Talks of AMN", href: "https://wa.me/6285813000449" }
   ]
 };
