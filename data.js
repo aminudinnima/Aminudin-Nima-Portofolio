@@ -11,14 +11,14 @@ const DATA = {
     { year: "2012", side: "right", role: "Graphic Designer", company: "PT. Indonesia Printer", period: "", tags: ["Printing", "Packaging"] }
   ],
   builds: [
-    { stat: "", statLabel: "SOON ELEVATE", image: "", meta: "SOON ELEVATE" },
-    { stat: "", statLabel: "SOON ELEVATE", image: "", meta: "SOON ELEVATE" },
-    { stat: "", statLabel: "SOON ELEVATE", image: "", meta: "SOON ELEVATE" },
-    { stat: "", statLabel: "SOON ELEVATE", image: "", meta: "SOON ELEVATE" }
+    { stat: "44+", statLabel: "news sources, ₹0 to run", image: "", meta: "Side Project · Personal · AI Tool", title: "Logistics Radar: My AI Research Bot", text: "A Telegram bot that scans logistics news every morning, scores each story with AI, and sends only what matters.", tags: ["AI", "Telegram Bot", "Automation", "0→1"], href: "#" },
+    { stat: "₹100Cr", statLabel: "ARR Blueprint", image: "", meta: "Case Study · Logistics · Strategy", title: "VahanSync: An Autonomous Logistics OS", text: "A zero-touch matchmaking OS that connects shippers to the right vehicle in under 20 minutes.", tags: ["Logistics", "AI/ML", "Marketplace", "B2B"], href: "#" },
+    { stat: "$55B→$350B", statLabel: "The eCommerce Delta", image: "", meta: "Case Study · Product Strategy", title: "Rebuilding WhatsApp Marketplace", text: "Turning the world's most-used messenger into a hyper-local, end-to-end marketplace for India's SMBs.", tags: ["Consumer", "Strategy", "Marketplace", "UX"], href: "#" },
+    { stat: "73x", statLabel: "Oversubscription — Solved", image: "", meta: "Case Study · Consumer Product", title: "Engineering Fair Ticketing", text: "Redesigning high-demand event booking from a speed race into a transparent, IPO-style draw.", tags: ["Consumer", "Product", "UX", "Strategy"], href: "#" }
   ],
   library: [
     { icon: "folder", title: "PM & Startups", sub: "24 chapters", text: "The PM Master Guide: frameworks, metrics, strategy, design thinking and technical fundamentals.", cta: "Start the guide →", href: "#", color: "16,185,129" },
-    { icon: "spark", title: "AMN Blogs", sub: "54 pieces", text: "English poems. Written when PRDs feel too serious.", cta: "Read the notebook →", href: "#", color: "52,211,153" },
+    { icon: "spark", title: "Poetry & Writing", sub: "54 pieces", text: "Original शायरी, कविताएं and English poems. Written when PRDs feel too serious.", cta: "Read the notebook →", href: "#", color: "52,211,153" },
     { icon: "grad", title: "Books & Articles", sub: "Coming soon", text: "Reads that shifted how I think, and essays on product, life and persistent curiosities.", soon: true, color: "20,184,166" }
   ],
   contacts: [
@@ -26,6 +26,6 @@ const DATA = {
     { icon: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/aminudin-nima-6137a7b7/" },
     { icon: "github", label: "GitHub", href: "https://github.com/aminudinnima" },
     { icon: "instagram", label: "Instagram", href: "https://www.instagram.com/aminudin_nima/" },
-    { icon: "globe", label: "Talks of AMN", href: "https://wa.link/8agd6x" }
+    { icon: "globe", label: "Talks of AMN", href: "https://wa.me/62 858-1300-0449" }
   ]
 };
