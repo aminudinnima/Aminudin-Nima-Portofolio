@@ -22,7 +22,7 @@ const DATA = {
     { icon: "grad", title: "Books & Articles", sub: "Coming soon", text: "Reads that shifted how I think, and essays on product, life and persistent curiosities.", soon: true, color: "20,184,166" }
   ],
   contacts: [
-    { icon: "mail", label: "Gmail", href: "aminudinnima.work@gmail.com" },
+    { icon: "mail", label: "Gmail", href: "aminudinnima.work@gmail.com:" },
     { icon: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/aminudin-nima-6137a7b7/" },
     { icon: "github", label: "GitHub", href: "https://github.com/aminudinnima" },
     { icon: "instagram", label: "Instagram", href: "https://www.instagram.com/aminudin_nima/" },
