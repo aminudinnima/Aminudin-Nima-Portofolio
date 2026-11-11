@@ -26,6 +26,6 @@ const DATA = {
     { icon: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/aminudin-nima-6137a7b7/" },
     { icon: "github", label: "GitHub", href: "https://github.com/aminudinnima" },
     { icon: "instagram", label: "Instagram", href: "https://www.instagram.com/aminudin_nima/" },
-    { icon: "globe", label: "Talks of AMN", href: "https://wa.me/62 858-1300-0449" }
+    { icon: "globe", label: "Talks of AMN", href: "https://wa.link/xf25ki" }
   ]
 };
