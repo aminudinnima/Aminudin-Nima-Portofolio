@@ -66,15 +66,32 @@ $("menu").addEventListener("click", () => $("nav").classList.toggle("open"));
 $("nav").addEventListener("click", () => $("nav").classList.remove("open"));
 
 /* ====== Timeline: curved animated spine + scroll-reveal ====== */
+function positionDots(el, path, leftEdge) {
+  const items = el.querySelectorAll(".tl-item");
+  const total = path.getTotalLength();
+  if (!total) return;
+  items.forEach((item) => {
+    const targetY = item.offsetTop + 8;
+    let lo = 0, hi = total, pt = path.getPointAtLength(0);
+    for (let k = 0; k < 24; k++) {
+      const mid = (lo + hi) / 2;
+      pt = path.getPointAtLength(mid);
+      if (pt.y < targetY) lo = mid; else hi = mid;
+    }
+    item.style.setProperty("--dotx", (leftEdge + pt.x) + "px");
+  });
+}
+
 function buildTimelineLine() {
   const el = $("timeline");
   if (!el) return null;
   const h = Math.max(el.scrollHeight, 1);
   const mobile = window.innerWidth <= 800;
-  const w = 48;
+  const w = mobile ? 16 : 48;
+  const leftEdge = mobile ? 7 : (el.clientWidth / 2 - w / 2);
   let d;
   if (mobile) {
-    d = `M 24 0 L 24 ${h}`;
+    d = `M ${w / 2} 0 L ${w / 2} ${h}`;
   } else {
     const pts = [[24, 0], [40, h * 0.22], [10, h * 0.5], [38, h * 0.76], [20, h]];
     d = `M ${pts[0][0]} ${pts[0][1]} `;
@@ -92,8 +109,9 @@ function buildTimelineLine() {
     const defs = document.createElementNS(ns, "defs");
     const grad = document.createElementNS(ns, "linearGradient");
     grad.setAttribute("id", "tlGradient");
+    grad.setAttribute("gradientUnits", "userSpaceOnUse");
     grad.setAttribute("x1", "0"); grad.setAttribute("y1", "0");
-    grad.setAttribute("x2", "0"); grad.setAttribute("y2", "1");
+    grad.setAttribute("x2", "0"); grad.setAttribute("y2", "100");
     grad.innerHTML = `<stop offset="0%" stop-color="#111"/><stop offset="100%" stop-color="#c9c9c9"/>`;
     defs.appendChild(grad);
     svgEl.appendChild(defs);
@@ -103,11 +121,14 @@ function buildTimelineLine() {
   }
   svgEl.setAttribute("viewBox", `0 0 ${w} ${h}`);
   svgEl.style.height = h + "px";
+  const gradEl = svgEl.querySelector("#tlGradient");
+  if (gradEl) gradEl.setAttribute("y2", h);
   const path = svgEl.querySelector("path");
   path.setAttribute("d", d);
   const len = path.getTotalLength();
   path.style.strokeDasharray = len;
   if (!path.dataset.drawn) path.style.strokeDashoffset = len;
+  positionDots(el, path, leftEdge);
   return path;
 }
 let tlPath = buildTimelineLine();
@@ -116,6 +137,7 @@ window.addEventListener("resize", () => {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(() => { tlPath = buildTimelineLine(); }, 150);
 });
+window.addEventListener("load", () => { tlPath = buildTimelineLine(); });
 
 if ("IntersectionObserver" in window) {
   const itemObserver = new IntersectionObserver((entries) => {
