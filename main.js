@@ -52,3 +52,76 @@ $("contact-links").innerHTML = DATA.contacts.map((c) => `<a class="btn" href="${
 document.querySelectorAll("[data-icon]").forEach((el) => (el.innerHTML = ic(el.dataset.icon)));
 $("menu").addEventListener("click", () => $("nav").classList.toggle("open"));
 $("nav").addEventListener("click", () => $("nav").classList.remove("open"));
+
+/* ====== Timeline: curved animated spine + scroll-reveal ====== */
+function buildTimelineLine() {
+  const el = $("timeline");
+  if (!el) return null;
+  const h = Math.max(el.scrollHeight, 1);
+  const mobile = window.innerWidth <= 800;
+  const w = 48;
+  let d;
+  if (mobile) {
+    d = `M 24 0 L 24 ${h}`;
+  } else {
+    const pts = [[24, 0], [40, h * 0.22], [10, h * 0.5], [38, h * 0.76], [20, h]];
+    d = `M ${pts[0][0]} ${pts[0][1]} `;
+    for (let i = 1; i < pts.length; i++) {
+      const [x0, y0] = pts[i - 1], [x1, y1] = pts[i], cy = (y0 + y1) / 2;
+      d += `C ${x0} ${cy}, ${x1} ${cy}, ${x1} ${y1} `;
+    }
+  }
+  let ns = "http://www.w3.org/2000/svg";
+  let svgEl = el.querySelector(".timeline-line");
+  if (!svgEl) {
+    svgEl = document.createElementNS(ns, "svg");
+    svgEl.setAttribute("class", "timeline-line");
+    svgEl.setAttribute("preserveAspectRatio", "none");
+    const path = document.createElementNS(ns, "path");
+    svgEl.appendChild(path);
+    el.prepend(svgEl);
+  }
+  svgEl.setAttribute("viewBox", `0 0 ${w} ${h}`);
+  svgEl.style.height = h + "px";
+  const path = svgEl.querySelector("path");
+  path.setAttribute("d", d);
+  const len = path.getTotalLength();
+  path.style.strokeDasharray = len;
+  if (!path.dataset.drawn) path.style.strokeDashoffset = len;
+  return path;
+}
+let tlPath = buildTimelineLine();
+let resizeTimer;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => { tlPath = buildTimelineLine(); }, 150);
+});
+
+if ("IntersectionObserver" in window) {
+  const itemObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        itemObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2, rootMargin: "0px 0px -60px 0px" });
+  document.querySelectorAll(".tl-item").forEach((item, i) => {
+    item.style.transitionDelay = `${Math.min(i * 70, 420)}ms`;
+    itemObserver.observe(item);
+  });
+
+  const lineObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && tlPath) {
+        tlPath.style.strokeDashoffset = "0";
+        tlPath.dataset.drawn = "1";
+        lineObserver.disconnect();
+      }
+    });
+  }, { threshold: 0.05 });
+  if ($("timeline")) lineObserver.observe($("timeline"));
+} else {
+  document.querySelectorAll(".tl-item").forEach((item) => item.classList.add("visible"));
+  if (tlPath) tlPath.style.strokeDashoffset = "0";
+}
