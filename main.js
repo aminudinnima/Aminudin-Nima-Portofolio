@@ -17,8 +17,11 @@ const ICONS = {
 const ic = (n) => (ICONS[n] ? svg(ICONS[n]) : "");
 const tags = (a) => a.map((t) => `<span class="tag">${t}</span>`).join("");
 
-$("timeline").innerHTML = DATA.experience.map((e) => `
-  <article class="tl-item ${e.side}">
+$("timeline").innerHTML = DATA.experience.map((e, i, arr) => {
+  const t = arr.length > 1 ? i / (arr.length - 1) : 0;
+  const shade = Math.round(17 + t * (170 - 17));
+  return `
+  <article class="tl-item ${e.side}" style="--dot:rgb(${shade},${shade},${shade})">
     <div class="tl-year">${e.year}<small>${e.period || ""}</small></div>
     <div class="tl-body">
       <div class="card">
@@ -28,7 +31,8 @@ $("timeline").innerHTML = DATA.experience.map((e) => `
       </div>
       ${e.extra ? `<div class="extra">${ic("spark")}<div>${e.extra.title}<small>${e.extra.period}</small></div></div>` : ""}
     </div>
-  </article>`).join("");
+  </article>`;
+}).join("");
 
 $("builds-grid").innerHTML = DATA.builds.map((b) => `
   <a class="card build" href="${b.href}">
@@ -77,6 +81,14 @@ function buildTimelineLine() {
     svgEl = document.createElementNS(ns, "svg");
     svgEl.setAttribute("class", "timeline-line");
     svgEl.setAttribute("preserveAspectRatio", "none");
+    const defs = document.createElementNS(ns, "defs");
+    const grad = document.createElementNS(ns, "linearGradient");
+    grad.setAttribute("id", "tlGradient");
+    grad.setAttribute("x1", "0"); grad.setAttribute("y1", "0");
+    grad.setAttribute("x2", "0"); grad.setAttribute("y2", "1");
+    grad.innerHTML = `<stop offset="0%" stop-color="#111"/><stop offset="100%" stop-color="#c9c9c9"/>`;
+    defs.appendChild(grad);
+    svgEl.appendChild(defs);
     const path = document.createElementNS(ns, "path");
     svgEl.appendChild(path);
     el.prepend(svgEl);
