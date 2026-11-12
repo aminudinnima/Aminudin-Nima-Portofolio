@@ -61,8 +61,10 @@ h1{font-size:clamp(48px,8vw,88px);line-height:1;font-weight:800;letter-spacing:-
 .tl-year{font-size:41.6px;line-height:1.1;font-weight:800;letter-spacing:-2.9px;color:#111}
 .tl-year small{display:block;margin-top:4px;letter-spacing:0;font:400 10.4px var(--mono);color:rgba(17,17,17,.5)}
 .extra{display:flex;gap:9px;margin:14px 0 0 32px;font-size:12.5px;font-weight:600;color:rgba(17,17,17,.85)}
+.extra.plain{margin-left:0}
 .extra svg{width:14px;height:14px;margin-top:3px;color:#111;flex:none}
 .extra small{display:block;font:400 10.4px var(--mono);color:rgba(17,17,17,.5)}
+.extra .tags{margin-top:8px;font-weight:400}
 /* grids */
 .grid{display:grid;gap:24px}
 .builds{grid-template-columns:repeat(4,1fr)}

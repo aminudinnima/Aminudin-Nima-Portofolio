@@ -17,19 +17,27 @@ const ICONS = {
 const ic = (n) => (ICONS[n] ? svg(ICONS[n]) : "");
 const tags = (a) => a.map((t) => `<span class="tag">${t}</span>`).join("");
 
+const extraHtml = (ex) => `
+  <div class="extra${ex.plain ? " plain" : ""}">
+    ${ex.plain ? "" : ic("spark")}
+    <div>${ex.title}<small>${ex.period || ""}</small>${ex.tags ? `<div class="tags">${tags(ex.tags)}</div>` : ""}</div>
+  </div>`;
+
 $("timeline").innerHTML = DATA.experience.map((e, i, arr) => {
   const t = arr.length > 1 ? i / (arr.length - 1) : 0;
   const shade = Math.round(17 + t * (170 - 17));
+  const extrasList = e.extras || (e.extra ? [e.extra] : []);
   return `
   <article class="tl-item ${e.side}" style="--dot:rgb(${shade},${shade},${shade})">
     <div class="tl-year">${e.year}<small>${e.period || ""}</small></div>
     <div class="tl-body">
+      ${e.role ? `
       <div class="card">
         ${e.current ? '<span class="badge">Current</span>' : ""}
         <div class="row"><div><h3>${e.role}</h3><p class="company">${e.company}</p></div><span class="muted small">Details ↗</span></div>
         <div class="tags">${tags(e.tags)}</div>
-      </div>
-      ${e.extra ? `<div class="extra">${ic("spark")}<div>${e.extra.title}<small>${e.extra.period}</small></div></div>` : ""}
+      </div>` : ""}
+      ${extrasList.map(extraHtml).join("")}
     </div>
   </article>`;
 }).join("");

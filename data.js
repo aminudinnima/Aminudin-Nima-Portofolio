@@ -1,14 +1,25 @@
 /* ====== EDIT KONTEN DI SINI — tidak perlu menyentuh HTML/CSS ====== */
 const DATA = {
   experience: [
-    { year: "2026", side: "right", role: "Digital Project Manager", company: "PT. Sekawan Media Informatika", period: "2 year · August 2026 – Present", tags: ["Human Resource Information System", "Logistics", "SaaS"], extra: { title: "Digital Health Product Manager at Connected Life", period: "August 2026 – Freelance" } },
-    { year: "2024", side: "left", role: "Digital Product Manager", company: "PT. Sofco Graha", period: "Aug 2024 – Present", tags: ["Human Resource Information System", "Applied AI", "SaaS"], current: true },
-    { year: "2023", side: "right", role: "UI UX Designer | IT Regional", company: "PT. Home Credit Indonesia", period: "", tags: ["Financial Service", "Support"] },
-    { year: "2023", side: "left", role: "Digital Product Manager", company: "PT. Infosys Solusi Terpadu", period: "Apr 2023 – Aug 2024", tags: ["Financial Service", "SaaS"] },
-    { year: "2022", side: "left", role: "Senior IT Business Analyst", company: "PT. Infosys Solusi Terpadu", period: "", tags: ["Financial Service", "SaaS"] },
-    { year: "2022", side: "left", role: "Software Development", company: "PT. Digital Prima Imaging", period: "", tags: ["Color Management System", "Printing Digital"] },
-    { year: "2017", side: "right", role: "IT Regional", company: "PT. Home Credit Indonesia", period: "", tags: ["Financial Service", "Support"] },
-    { year: "2012", side: "right", role: "Graphic Designer", company: "PT. Indonesia Printer", period: "", tags: ["Printing", "Packaging"] }
+    { year: "2026", side: "left", role: "Digital Product Manager", company: "PT. Sofco Graha", period: "2 year · August 2024 – Present", tags: ["Human Resource Information System", "Applied AI", "ERP", "SaaS"], current: true },
+    { year: "2024", side: "right", role: "Digital Project Manager", company: "PT. Sekawan Media Informatika", period: "1 year and 5 months · April 2023 – August 2024", tags: ["Human Resource Information System", "ERP", "Saas"] },
+    { year: "2023", side: "left", period: "1 year · March 2023 – Feb 2024", extras: [
+      { title: "Digital Health Product Manager at Connected Life", period: "1 yr 1 months · March 2023 – Freelance", tags: ["Health Tech", "Saas"] },
+      { title: "Digital Product at PT. Alfahuma Rekayasa Teknology", period: "6 months · April 2023 – Freelance", tags: ["Learning Development", "Saas"] }
+    ] },
+    { year: "2022", side: "right", role: "Digital Product Manager", company: "PT. Infosys Solusi Terpadu", period: "1 year · Oct 2022 – Feb 2023", tags: ["Bank Digital", "Saas"] },
+    { year: "2022", side: "right", period: "1 year · Oct 2022 – Feb 2023", extras: [
+      { title: "Senior IT Business Analyst at PT. Infosys Solusi Terpadu", period: "6 months · April 2023 – Freelance", tags: ["Bank Digital", "Saas"], plain: true }
+    ] },
+    { year: "2022", side: "left", role: "UIUX I IT Regional", company: "PT. Home Credit Indonesia", period: "2 years · Juli 2019 – Juni 2022", tags: ["Fintech"], extras: [
+      { title: "IT Regional at PT. Home Credit Indonesia", period: "2 years · Juli 2017 – Juli 2019", tags: ["Fintech"], plain: true }
+    ] },
+    { year: "2017", side: "right", period: "3 years 8 months · Sept 2013 – May 2017", extras: [
+      { title: "Software Development GMG Color at PT. Digital Prima Imaging", period: "3 years 8 months · Sept 2013 – May 2017", tags: ["Printing Industry"], plain: true }
+    ] },
+    { year: "2013", side: "right", period: "1 years 3 months · May 2012 - August 2013", extras: [
+      { title: "Graphic Design at PT. Indonesia Printer", period: "1 years 3 months · May 2012 – August 2013", tags: ["Printing Industry"], plain: true }
+    ] }
   ],
   builds: [
     { stat: "44+", statLabel: "news sources, ₹0 to run", image: "", meta: "Side Project · Personal · AI Tool", title: "Logistics Radar: My AI Research Bot", text: "A Telegram bot that scans logistics news every morning, scores each story with AI, and sends only what matters.", tags: ["AI", "Telegram Bot", "Automation", "0→1"], href: "#" },
