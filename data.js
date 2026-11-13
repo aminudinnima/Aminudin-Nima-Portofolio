@@ -12,6 +12,7 @@ const DATA = {
       { title: "Senior IT Business Analyst at PT. Infosys Solusi Terpadu", period: "5 months · Oct 2022 – Feb 2023", tags: ["Bank Digital", "Saas"], plain: true }
     ] },
     { year: "2019", side: "left", role: "UIUX I IT Regional", company: "PT. Home Credit Indonesia", period: "2 years 11 months · Juli 2019 – Juni 2022", tags: ["Fintech"], extras: [
+      { year: "2017", side: "right", period: "2 years · Juli 2017 – Juli 2019", extras: [
       { title: "IT Regional at PT. Home Credit Indonesia", period: "2 years · Juli 2017 – Juli 2019", tags: ["Fintech"], plain: true }
     ] },
     { year: "2017", side: "right", period: "3 years 8 months · Sept 2013 – May 2017", extras: [
