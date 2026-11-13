@@ -7,9 +7,9 @@ const DATA = {
       { title: "Digital Health Product Manager at Connected Life", period: "11 months · March 2023 - Februari 2024 · Freelance", tags: ["Health Tech", "Saas"] },
       { title: "Digital Product at PT. Alfahuma Rekayasa Teknologi", period: "5 months ·April 2023 - September 2023 · Freelance", tags: ["Learning Development", "Saas"] }
     ] },
-    { year: "2022", side: "right", role: "Digital Product Manager", company: "PT. Infosys Solusi Terpadu", period: "1 year · 8 months Oct 2022 – April 2023", tags: ["Bank Digital", "Saas"] },
+    { year: "2022", side: "right", role: "Digital Product Manager", company: "PT. Infosys Solusi Terpadu", period: "1 year · 8 months Oct 2022 – Februari 2023", tags: ["Bank Digital", "Saas"] },
     { year: "2022", side: "right", period: "5 months · Oct 2022 – Feb 2023", extras: [
-      { title: "Senior IT Business Analyst at PT. Infosys Solusi Terpadu", period: "5 months · Oct 2022 – Feb 2023", tags: ["Bank Digital", "Saas"], plain: true }
+      { title: "Senior IT Business Analyst at PT. Infosys Solusi Terpadu", period: "5 months · July 2022 – Sept 2023", tags: ["Bank Digital", "Saas"], plain: true }
     ] },
     { year: "2022", side: "left", role: "UIUX I IT Regional", company: "PT. Home Credit Indonesia", period: "2 years · Juli 2019 – Juni 2022", tags: ["Fintech"], extras: [
       { title: "IT Regional at PT. Home Credit Indonesia", period: "2 years · Juli 2017 – Juli 2019", tags: ["Fintech"], plain: true }
