@@ -84,6 +84,14 @@ h1{font-size:clamp(48px,8vw,88px);line-height:1;font-weight:800;letter-spacing:-
 .build:nth-child(odd) .mono.violet{color:#fff}
 .build:nth-child(odd) .build-body .tag{background:#fff;border-color:#fff;color:#000}
 .build:nth-child(odd) .build-body .more{color:#fff}
+.build:nth-child(odd) .build-img b{color:#fff}
+.build:nth-child(odd) .build-img span{color:rgba(255,255,255,.66)}
+
+/* Decorative illustration behind each build-img panel, themed per card */
+.build:nth-child(4n+1) .build-img{background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.9)),repeating-radial-gradient(circle at 78% 22%,rgba(255,255,255,.14) 0 2px,transparent 2px 36px),#000}
+.build:nth-child(4n+2) .build-img{background:linear-gradient(180deg,rgba(255,255,255,0) 40%,rgba(255,255,255,.92)),repeating-linear-gradient(135deg,rgba(0,0,0,.08) 0 2px,transparent 2px 24px),radial-gradient(circle at 24% 72%,rgba(0,0,0,.18) 0 4px,transparent 5px),radial-gradient(circle at 68% 30%,rgba(0,0,0,.18) 0 4px,transparent 5px),radial-gradient(circle at 50% 56%,rgba(0,0,0,.18) 0 4px,transparent 5px),#f3f3f3}
+.build:nth-child(4n+3) .build-img{background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.9)),repeating-linear-gradient(0deg,rgba(255,255,255,.07) 0 1px,transparent 1px 30px),repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,transparent 1px 30px),#000}
+.build:nth-child(4n+4) .build-img{background:linear-gradient(180deg,rgba(255,255,255,0) 40%,rgba(255,255,255,.92)),repeating-linear-gradient(90deg,rgba(0,0,0,.12) 0 2px,transparent 2px 16px),#f3f3f3}
 .lib{display:flex;flex-direction:column;gap:20px;padding:25px;border-radius:18px;transition:.2s;background:#eaeaea;box-shadow:7px 5px 8.55px rgba(0,0,0,.25)}
 .lib.soon{opacity:.7}
 .lib-head{display:flex;gap:16px;align-items:center}
