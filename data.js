@@ -2,16 +2,16 @@
 const DATA = {
   experience: [
     { year: "2026", side: "left", role: "Digital Product Manager", company: "PT. Sofco Graha", period: "2 year · August 2024 – Present", tags: ["Human Resource Information System", "Applied AI", "ERP", "SaaS"], current: true },
-    { year: "2024", side: "right", role: "Digital Project Manager", company: "PT. Sekawan Media Informatika", period: "1 year and 5 months · April 2023 – August 2024", tags: ["Human Resource Information System", "ERP", "Saas"] },
+    { year: "2024", side: "right", role: "Digital Project Manager", company: "PT. Sekawan Media Informatika", period: "1 year and 4 months · April 2023 – August 2024", tags: ["Human Resource Information System", "ERP", "Saas"] },
     { year: "2023", side: "left", period: "1 year · March 2023 – Feb 2024", extras: [
-      { title: "Digital Health Product Manager at Connected Life", period: "March 2023 - Februari 2024 · Freelance", tags: ["Health Tech", "Saas"] },
-      { title: "Digital Product at PT. Alfahuma Rekayasa Teknology", period: "April 2023 - September 2023 · Freelance", tags: ["Learning Development", "Saas"] }
+      { title: "Digital Health Product Manager at Connected Life", period: "11 months · March 2023 - Februari 2024 · Freelance", tags: ["Health Tech", "Saas"] },
+      { title: "Digital Product at PT. Alfahuma Rekayasa Teknologi", period: "5 months ·April 2023 - September 2023 · Freelance", tags: ["Learning Development", "Saas"] }
     ] },
-    { year: "2022", side: "right", role: "Digital Product Manager", company: "PT. Infosys Solusi Terpadu", period: "1 year · Oct 2022 – Feb 2023", tags: ["Bank Digital", "Saas"] },
-    { year: "2022", side: "right", period: "1 year · Oct 2022 – Feb 2023", extras: [
-      { title: "Senior IT Business Analyst at PT. Infosys Solusi Terpadu", period: "April 2023 - September 2023", tags: ["Bank Digital", "Saas"], plain: true }
+    { year: "2022", side: "right", role: "Digital Product Manager", company: "PT. Infosys Solusi Terpadu", period: "6 months Oct 2022 – April 2023", tags: ["Bank Digital", "Saas"] },
+    { year: "2022", side: "right", period: "5 months · Oct 2022 – Feb 2023", extras: [
+      { title: "Senior IT Business Analyst at PT. Infosys Solusi Terpadu", period: "5 months · Oct 2022 – Feb 2023", tags: ["Bank Digital", "Saas"], plain: true }
     ] },
-    { year: "2022", side: "left", role: "UIUX I IT Regional", company: "PT. Home Credit Indonesia", period: "2 years · Juli 2019 – Juni 2022", tags: ["Fintech"], extras: [
+    { year: "2019", side: "left", role: "UIUX I IT Regional", company: "PT. Home Credit Indonesia", period: "2 years 11 months · Juli 2019 – Juni 2022", tags: ["Fintech"], extras: [
       { title: "IT Regional at PT. Home Credit Indonesia", period: "2 years · Juli 2017 – Juli 2019", tags: ["Fintech"], plain: true }
     ] },
     { year: "2017", side: "right", period: "3 years 8 months · Sept 2013 – May 2017", extras: [
